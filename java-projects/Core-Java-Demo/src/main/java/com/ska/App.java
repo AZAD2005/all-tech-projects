@@ -2,22 +2,25 @@ package com.ska;
 
 import com.pojo.DoctorModel;
 
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
+        byte b = 10; // 1 byte
+        short s = b;
+        int i = b;
+        long l = b;
 
-        DoctorModel doctorModel = new DoctorModel();
-        doctorModel.setdAge(45);
-        doctorModel.setdName("Azad");
-        doctorModel.setLocation("MVG");
-
-Integer age = doctorModel.getdAge();
-        System.out.println(age);
-
-        doctorModel.setMBBSDocrot(true);
-        Boolean bolean = doctorModel.getMBBSDocrot();
-        System.out.println(bolean);
+        float f = b;
+        double d = b;
     }
+
+    static float methodOne(int i) {
+        long j = i;     //int is auto widened to long
+        return j;       //long is auto widened to float
+    }
+
 
 }
 
